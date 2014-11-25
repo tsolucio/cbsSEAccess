@@ -1,65 +1,187 @@
 <?xml version='1.0'?>
 <module>
-<name>ModuleClass</name>
-<label>ModuleClass</label>
-<parent>Settings</parent>
-<version>1.0</version>
-<short_description>Module description.</short_description>
+<exporttime>2014-11-25 15:42:33</exporttime>
+<name>cbsSEAccess</name>
+<label>cbsSEAccess</label>
+<parent>Analytics</parent>
 <dependencies>
-<vtiger_version>5.4.0</vtiger_version>
-<vtiger_max_version>5.*</vtiger_max_version>
+<vtiger_version>5.5.0</vtiger_version>
 </dependencies>
-<license>
-<inline><![CDATA[Your license here]]></inline>
-</license>
 <tables>
 <table>
-<name>vtiger_moduleclass</name>
-<sql><![CDATA[CREATE TABLE `vtiger_moduleclass` (
-  `moduleclassid` int(11) default NULL,
-  `moduleclass_no` varchar(26) default NULL,
-  ..rest of fields..
-  PRIMARY KEY (`moduleclassid`)
+<name>vtiger_cbsseaccess</name>
+<sql><![CDATA[CREATE TABLE `vtiger_cbsseaccess` (
+  `cbsseaccessid` int(11) DEFAULT NULL,
+  `sengineaccessno` varchar(255) DEFAULT NULL,
+  `access_date` date DEFAULT NULL,
+  `access_time` time DEFAULT NULL,
+  `relatedto` varchar(100) DEFAULT NULL,
+  `access_url` varchar(100) DEFAULT NULL,
+  `access_web` varchar(100) DEFAULT NULL,
+  `organic` varchar(100) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
 </table>
 <table>
-<name>vtiger_moduleclasscf</name>
-<sql><![CDATA[CREATE TABLE `vtiger_moduleclasscf` (
-  `moduleclassid` int(11) NOT NULL,
-  PRIMARY KEY (`moduleclassid`)
+<name>vtiger_cbsseaccesscf</name>
+<sql><![CDATA[CREATE TABLE `vtiger_cbsseaccesscf` (
+  `cbsseaccessid` int(11) NOT NULL,
+  PRIMARY KEY (`cbsseaccessid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
 </table>
 </tables>
 <blocks>
 <block>
-<label>LBL_MODULEBLOCK_INFORMATION</label>
+<label>LBL_CBSSEACCESS_INFORMATION</label>
 <fields>
 <field>
-<fieldname>moduleclass_no</fieldname>
+<fieldname>sengineaccessno</fieldname>
 <uitype>4</uitype>
-<columnname>moduleclass_no</columnname>
-<tablename>vtiger_moduleclass</tablename>
+<columnname>sengineaccessno</columnname>
+<tablename>vtiger_cbsseaccess</tablename>
 <generatedtype>1</generatedtype>
-<fieldlabel>moduleclass_no</fieldlabel>
+<fieldlabel>Sengine Access No.</fieldlabel>
 <readonly>1</readonly>
-<presence>0</presence>
-<selected>0</selected>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
 <sequence>1</sequence>
 <maximumlength>100</maximumlength>
-<typeofdata>V~M</typeofdata>
-<quickcreate>0</quickcreate>
-<quickcreatesequence>0</quickcreatesequence>
+<typeofdata>V~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
 <displaytype>1</displaytype>
 <info_type>BAS</info_type>
 <helpinfo><![CDATA[]]></helpinfo>
 <masseditable>1</masseditable>
 <entityidentifier>
-<entityidfield>moduleclassid</entityidfield>
-<entityidcolumn>moduleclassid</entityidcolumn>
+<entityidfield>cbsseaccessid</entityidfield>
+<entityidcolumn>cbsseaccessid</entityidcolumn>
 </entityidentifier>
 </field>
 <field>
-.. rest of fields ..
+<fieldname>access_date</fieldname>
+<uitype>5</uitype>
+<columnname>access_date</columnname>
+<tablename>vtiger_cbsseaccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>Access Date</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>2</sequence>
+<maximumlength>100</maximumlength>
+<typeofdata>D~M</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+</field>
+<field>
+<fieldname>access_time</fieldname>
+<uitype>14</uitype>
+<columnname>access_time</columnname>
+<tablename>vtiger_cbsseaccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>Access Time</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>3</sequence>
+<maximumlength>100</maximumlength>
+<typeofdata>T~M</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+</field>
+<field>
+<fieldname>relatedto</fieldname>
+<uitype>10</uitype>
+<columnname>relatedto</columnname>
+<tablename>vtiger_cbsseaccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>Related to</fieldlabel>
+<readonly>1</readonly>
+<presence>0</presence>
+<defaultvalue></defaultvalue>
+<sequence>4</sequence>
+<maximumlength>100</maximumlength>
+<typeofdata>V~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+<relatedmodules>
+<relatedmodule>Accounts</relatedmodule>
+<relatedmodule>Contacts</relatedmodule>
+<relatedmodule>Leads</relatedmodule>
+</relatedmodules>
+</field>
+<field>
+<fieldname>access_url</fieldname>
+<uitype>17</uitype>
+<columnname>access_url</columnname>
+<tablename>vtiger_cbsseaccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>Access URL</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>5</sequence>
+<maximumlength>100</maximumlength>
+<typeofdata>V~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+</field>
+<field>
+<fieldname>access_web</fieldname>
+<uitype>17</uitype>
+<columnname>access_web</columnname>
+<tablename>vtiger_cbsseaccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>Access Web</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>6</sequence>
+<maximumlength>100</maximumlength>
+<typeofdata>V~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+</field>
+<field>
+<fieldname>organic</fieldname>
+<uitype>56</uitype>
+<columnname>organic</columnname>
+<tablename>vtiger_cbsseaccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>Organic</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>7</sequence>
+<maximumlength>100</maximumlength>
+<typeofdata>V~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
 </field>
 <field>
 <fieldname>assigned_user_id</fieldname>
@@ -69,13 +191,13 @@
 <generatedtype>1</generatedtype>
 <fieldlabel>Assigned To</fieldlabel>
 <readonly>1</readonly>
-<presence>0</presence>
-<selected>0</selected>
-<sequence>10</sequence>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>8</sequence>
 <maximumlength>100</maximumlength>
-<typeofdata>V~M</typeofdata>
+<typeofdata>V~O</typeofdata>
 <quickcreate>1</quickcreate>
-<quickcreatesequence>1</quickcreatesequence>
+<quickcreatesequence></quickcreatesequence>
 <displaytype>1</displaytype>
 <info_type>BAS</info_type>
 <helpinfo><![CDATA[]]></helpinfo>
@@ -89,13 +211,13 @@
 <generatedtype>1</generatedtype>
 <fieldlabel>Created Time</fieldlabel>
 <readonly>1</readonly>
-<presence>0</presence>
-<selected>0</selected>
-<sequence>12</sequence>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>9</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>T~O</typeofdata>
-<quickcreate>3</quickcreate>
-<quickcreatesequence>8</quickcreatesequence>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
 <displaytype>2</displaytype>
 <info_type>BAS</info_type>
 <helpinfo><![CDATA[]]></helpinfo>
@@ -109,14 +231,34 @@
 <generatedtype>1</generatedtype>
 <fieldlabel>Modified Time</fieldlabel>
 <readonly>1</readonly>
-<presence>0</presence>
-<selected>0</selected>
-<sequence>13</sequence>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>10</sequence>
 <maximumlength>100</maximumlength>
 <typeofdata>T~O</typeofdata>
-<quickcreate>3</quickcreate>
-<quickcreatesequence>9</quickcreatesequence>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
 <displaytype>2</displaytype>
+<info_type>BAS</info_type>
+<helpinfo><![CDATA[]]></helpinfo>
+<masseditable>1</masseditable>
+</field>
+<field>
+<fieldname>description</fieldname>
+<uitype>19</uitype>
+<columnname>description</columnname>
+<tablename>vtiger_cbsseaccess</tablename>
+<generatedtype>1</generatedtype>
+<fieldlabel>Description</fieldlabel>
+<readonly>1</readonly>
+<presence>2</presence>
+<defaultvalue></defaultvalue>
+<sequence>11</sequence>
+<maximumlength>100</maximumlength>
+<typeofdata>V~O</typeofdata>
+<quickcreate>1</quickcreate>
+<quickcreatesequence></quickcreatesequence>
+<displaytype>1</displaytype>
 <info_type>BAS</info_type>
 <helpinfo><![CDATA[]]></helpinfo>
 <masseditable>1</masseditable>
@@ -126,44 +268,36 @@
 <block>
 <label>LBL_CUSTOM_INFORMATION</label>
 </block>
-<block>
-<label>LBL_DESCRIPTION_INFORMATION</label>
-<fields>
-<field>
-<fieldname>description</fieldname>
-<uitype>19</uitype>
-<columnname>description</columnname>
-<tablename>vtiger_crmentity</tablename>
-<generatedtype>1</generatedtype>
-<fieldlabel>Description</fieldlabel>
-<readonly>1</readonly>
-<presence>2</presence>
-<selected>0</selected>
-<sequence>1</sequence>
-<maximumlength>100</maximumlength>
-<typeofdata>V~O</typeofdata>
-<quickcreate>1</quickcreate>
-<quickcreatesequence>10</quickcreatesequence>
-<displaytype>1</displaytype>
-<info_type>BAS</info_type>
-<helpinfo><![CDATA[]]></helpinfo>
-<masseditable>1</masseditable>
-</field>
-</fields>
-</block>
 </blocks>
 <customviews>
 <customview>
 <viewname>All</viewname>
-<setdefault>false</setdefault>
+<setdefault>true</setdefault>
 <setmetrics>false</setmetrics>
 <fields>
 <field>
-<fieldname>moduleclass_no</fieldname>
+<fieldname>sengineaccessno</fieldname>
 <columnindex>0</columnindex>
 </field>
 <field>
-.. All filter fields ..
+<fieldname>access_date</fieldname>
+<columnindex>1</columnindex>
+</field>
+<field>
+<fieldname>access_time</fieldname>
+<columnindex>2</columnindex>
+</field>
+<field>
+<fieldname>relatedto</fieldname>
+<columnindex>3</columnindex>
+</field>
+<field>
+<fieldname>access_web</fieldname>
+<columnindex>4</columnindex>
+</field>
+<field>
+<fieldname>organic</fieldname>
+<columnindex>5</columnindex>
 </field>
 </fields>
 </customview>
@@ -173,10 +307,6 @@
 </sharingaccess>
 <actions>
 <action>
-<name><![CDATA[Merge]]></name>
-<status>enabled</status>
-</action>
-<action>
 <name><![CDATA[Import]]></name>
 <status>enabled</status>
 </action>
@@ -184,11 +314,11 @@
 <name><![CDATA[Export]]></name>
 <status>enabled</status>
 </action>
+<action>
+<name><![CDATA[Merge]]></name>
+<status>enabled</status>
+</action>
 </actions>
-<relatedlists>
-</relatedlists>
-<customlinks>
-</customlinks>
 <crons>
 </crons>
 </module>
