@@ -38,7 +38,10 @@
   `relid` integer(11) DEFAULT NULL,
   `access_url` varchar(100) DEFAULT NULL,
   `access_web` varchar(100) DEFAULT NULL,
-  `organic` varchar(3) DEFAULT NULL
+  `organic` varchar(3) DEFAULT NULL,
+  PRIMARY KEY (`cbsseaccessid`),
+  index (`access_date`),
+  index (`access_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
 </table>
 <table>
@@ -129,7 +132,7 @@
 <defaultvalue></defaultvalue>
 <sequence>4</sequence>
 <maximumlength>100</maximumlength>
-<typeofdata>I~O</typeofdata>
+<typeofdata>N~O</typeofdata>
 <quickcreate>1</quickcreate>
 <quickcreatesequence></quickcreatesequence>
 <displaytype>1</displaytype>
