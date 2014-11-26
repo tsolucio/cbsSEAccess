@@ -44,52 +44,70 @@ class cbsSEAccess extends CRMEntity {
 	var $list_fields = Array (
 		/* Format: Field Label => Array(tablename, columnname) */
 		// tablename should not have prefix 'vtiger_'
-		'cbsseaccess Name'=> Array('cbsseaccess', 'cbsseaccessname'),
-		'Assigned To' => Array('crmentity','smownerid')
+		'Sengine Access No.'=> Array('cbsseaccess', 'sengineaccessno'),
+                'Access Date'=> Array('cbsseaccess', 'access_date'),
+                'Access Time'=> Array('cbsseaccess', 'access_time'),
+                'Related to'=> Array('cbsseaccess', 'relid'),
+                'Access Web'=> Array('cbsseaccess', 'access_web'),
+                'Organic'=> Array('cbsseaccess', 'organic')
 	);
 	var $list_fields_name = Array(
 		/* Format: Field Label => fieldname */
-		'cbsseaccess Name'=> 'cbsseaccessname',
-		'Assigned To' => 'assigned_user_id'
+		'Sengine Access No.'=> 'sengineaccessno',
+                'Access Date'=> 'access_date',
+                'Access Time'=> 'access_time',
+                'Related to'=> 'relid',
+		'Access Web'=> 'access_web',
+                'Organic'=> 'organic'
 	);
 
 	// Make the field link to detail view from list view (Fieldname)
-	var $list_link_field = 'cbsseaccessname';
+	var $list_link_field = 'sengineaccessno';
 
 	// For Popup listview and UI type support
 	var $search_fields = Array(
 		/* Format: Field Label => Array(tablename, columnname) */
 		// tablename should not have prefix 'vtiger_'
-		'cbsseaccess Name'=> Array('cbsseaccess', 'cbsseaccessname')
+		'Sengine Access No.'=> Array('cbsseaccess', 'sengineaccessno'),
+                'Access Date'=> Array('cbsseaccess', 'access_date'),
+                'Access Time'=> Array('cbsseaccess', 'access_time'),
+                'Related to'=> Array('cbsseaccess', 'relid'),
+                'Access Web'=> Array('cbsseaccess', 'access_web'),
+                'Organic'=> Array('cbsseaccess', 'organic')
 	);
 	var $search_fields_name = Array(
 		/* Format: Field Label => fieldname */
-		'cbsseaccess Name'=> 'cbsseaccessname'
+		'Sengine Access No.'=> 'sengineaccessno',
+                'Access Date'=> 'access_date',
+                'Access Time'=> 'access_time',
+                'Related to'=> 'relid',
+		'Access Web'=> 'access_web',
+                'Organic'=> 'organic'
 	);
 
 	// For Popup window record selection
-	var $popup_fields = Array('cbsseaccessname');
+	var $popup_fields = Array('sengineaccessno');
 
 	// Placeholder for sort fields - All the fields will be initialized for Sorting through initSortFields
 	var $sortby_fields = Array();
 
 	// For Alphabetical search
-	var $def_basicsearch_col = 'cbsseaccessname';
+	var $def_basicsearch_col = 'sengineaccessno';
 
 	// Column value to use on detail view record text display
-	var $def_detailview_recname = 'cbsseaccessname';
+	var $def_detailview_recname = 'sengineaccessno';
 
 	// Required Information for enabling Import feature
-	var $required_fields = Array('cbsseaccessname'=>1);
+	var $required_fields = Array('sengineaccessno'=>1);
 
 	// Callback function list during Importing
 	var $special_functions = Array('set_import_assigned_user');
 
-	var $default_order_by = 'cbsseaccessname';
+	var $default_order_by = 'sengineaccessno';
 	var $default_sort_order='ASC';
 	// Used when enabling/disabling the mandatory fields for the module.
 	// Refers to vtiger_field.fieldname values.
-	var $mandatory_fields = Array('createdtime', 'modifiedtime', 'cbsseaccessname');
+	var $mandatory_fields = Array('createdtime', 'modifiedtime', 'sengineaccessno');
 	
 	function __construct() {
 		global $log, $currentModule;
