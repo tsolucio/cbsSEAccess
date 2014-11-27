@@ -2,7 +2,7 @@
 <module>
 <exporttime>2014-11-25 15:42:33</exporttime>
 <name>cbsSEAccess</name>
-<label>cbsSEAccess</label>
+<label>Search Engine Access</label>
 <parent>Analytics</parent>
 <dependencies>
 <vtiger_version>5.5.0</vtiger_version>
@@ -40,8 +40,8 @@
   `access_web` varchar(100) DEFAULT NULL,
   `organic` varchar(3) DEFAULT NULL,
   PRIMARY KEY (`cbsseaccessid`),
-  index (`access_date`),
-  index (`access_time`)
+  index (`relid`),
+  index (`access_date`,`access_time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8]]></sql>
 </table>
 <table>
@@ -131,7 +131,7 @@
 <presence>0</presence>
 <defaultvalue></defaultvalue>
 <sequence>4</sequence>
-<maximumlength>100</maximumlength>
+<maximumlength>11</maximumlength>
 <typeofdata>N~O</typeofdata>
 <quickcreate>1</quickcreate>
 <quickcreatesequence></quickcreatesequence>
@@ -265,6 +265,14 @@
 <helpinfo><![CDATA[]]></helpinfo>
 <masseditable>1</masseditable>
 </field>
+</fields>
+</block>
+<block>
+<label>LBL_CUSTOM_INFORMATION</label>
+</block>
+<block>
+<label>LBL_DESCRIPTION_INFORMATION</label>
+<fields>
 <field>
 <fieldname>description</fieldname>
 <uitype>19</uitype>
@@ -280,15 +288,12 @@
 <typeofdata>V~O</typeofdata>
 <quickcreate>1</quickcreate>
 <quickcreatesequence></quickcreatesequence>
-<displaytype>2</displaytype>
+<displaytype>1</displaytype>
 <info_type>BAS</info_type>
 <helpinfo><![CDATA[]]></helpinfo>
 <masseditable>1</masseditable>
 </field>
 </fields>
-</block>
-<block>
-<label>LBL_CUSTOM_INFORMATION</label>
 </block>
 </blocks>
 <customviews>
