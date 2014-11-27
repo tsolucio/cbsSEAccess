@@ -441,15 +441,13 @@ class cbsSEAccess extends CRMEntity {
 	 */
 	function vtlib_handler($modulename, $event_type) {
 		if($event_type == 'module.postinstall') {
-                        $modAccounts=Vtiger_Module::getInstance('Accounts');
+			$modAccounts=Vtiger_Module::getInstance('Accounts');
 			$modContacts=Vtiger_Module::getInstance('Contacts');
-                        $modLeads=Vtiger_Module::getInstance('Leads');
-                        $module=Vtiger_Module::getInstance('cbsSEAccess');
-                        
-                        if ($modAccounts) $modAccounts->setRelatedList($module, 'cbsSEAccess', Array('ADD'),'get_dependents_list');
+			$modLeads=Vtiger_Module::getInstance('Leads');
+			$module=Vtiger_Module::getInstance('cbsSEAccess');
+			if ($modAccounts) $modAccounts->setRelatedList($module, 'cbsSEAccess', Array('ADD'),'get_dependents_list');
 			if ($modContacts) $modContacts->setRelatedList($module, 'cbsSEAccess', Array('ADD'),'get_dependents_list');
 			if ($modLeads) $modLeads->setRelatedList($module, 'cbsSEAccess', Array('ADD'),'get_dependents_list');
-			
 			// TODO Handle post installation actions
 			$this->setModuleSeqNumber('configure', $modulename, $modulename.'-', '0000001');
 		} else if($event_type == 'module.disabled') {

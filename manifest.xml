@@ -30,12 +30,12 @@
 <tables>
 <table>
 <name>vtiger_cbsseaccess</name>
-<sql><![CDATA[CREATE TABLE `vtiger_cbsseaccess` (
-  `cbsseaccessid` int(11) DEFAULT NULL,
+<sql><![CDATA[CREATE TABLE IF NOT EXISTS `vtiger_cbsseaccess` (
+  `cbsseaccessid` int(11) NOT NULL DEFAULT '0',
   `sengineaccessno` varchar(255) DEFAULT NULL,
   `access_date` date DEFAULT NULL,
   `access_time` time DEFAULT NULL,
-  `relid` integer(11) DEFAULT NULL,
+  `relid` int(11) DEFAULT NULL,
   `access_url` varchar(100) DEFAULT NULL,
   `access_web` varchar(100) DEFAULT NULL,
   `organic` varchar(3) DEFAULT NULL,
