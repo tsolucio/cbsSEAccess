@@ -9,15 +9,20 @@
  ************************************************************************************/
 
 $mod_strings = Array(
-	'ModuleName' => 'Module Name',
-	'SINGLE_ModuleName' => 'Module Name',
-	'ModuleName ID' => 'Module Name ID',
+    'cbsSEAccess' => 'Search Engine Access',
+    'cbsSEAccess' => 'Search Engine Access',
+    'sengineaccessno' => 'Sengine Access No.',
+    'access_date' => 'Access Date',
+    'access_time' => 'Access Time',
+    'relid' => 'Related to',
+    'access_url' => 'Access URL',
+    'access_web' => 'Access Web',
+    'organic' => 'Organic',
+    
 
-	'LBL_CUSTOM_INFORMATION' => 'Custom Information',
-	'LBL_MODULEBLOCK_INFORMATION' => 'ModuleBlock Information',
-	'LBL_DESCRIPTION_INFORMATION' => 'Description',
-
-	'ModuleFieldLabel' => 'ModuleFieldLabel Text',
+    'LBL_CUSTOM_INFORMATION' => 'Custom Information',
+    'LBL_CBSSEACCESS_INFORMATION' => 'Search Engine Access Information',
+    'LBL_DESCRIPTION_INFORMATION' => 'Description',
 );
 
 ?>
