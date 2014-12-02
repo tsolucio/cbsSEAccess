@@ -1,8 +1,7 @@
 <?xml version='1.0'?>
 <module>
-<exporttime>2014-11-25 15:42:33</exporttime>
 <name>cbsSEAccess</name>
-<label>Search Engine Access</label>
+<label>cbsSEAccess</label>
 <parent>Analytics</parent>
 <dependencies>
 <vtiger_version>5.5.0</vtiger_version>
@@ -62,7 +61,7 @@
 <columnname>sengineaccessno</columnname>
 <tablename>vtiger_cbsseaccess</tablename>
 <generatedtype>1</generatedtype>
-<fieldlabel>Sengine Access No.</fieldlabel>
+<fieldlabel>sengineaccessno</fieldlabel>
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
@@ -86,7 +85,7 @@
 <columnname>access_date</columnname>
 <tablename>vtiger_cbsseaccess</tablename>
 <generatedtype>1</generatedtype>
-<fieldlabel>Access Date</fieldlabel>
+<fieldlabel>access_date</fieldlabel>
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
@@ -106,7 +105,7 @@
 <columnname>access_time</columnname>
 <tablename>vtiger_cbsseaccess</tablename>
 <generatedtype>1</generatedtype>
-<fieldlabel>Access Time</fieldlabel>
+<fieldlabel>access_time</fieldlabel>
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
@@ -126,7 +125,7 @@
 <columnname>relid</columnname>
 <tablename>vtiger_cbsseaccess</tablename>
 <generatedtype>1</generatedtype>
-<fieldlabel>Related to</fieldlabel>
+<fieldlabel>relid</fieldlabel>
 <readonly>1</readonly>
 <presence>0</presence>
 <defaultvalue></defaultvalue>
@@ -151,7 +150,7 @@
 <columnname>access_url</columnname>
 <tablename>vtiger_cbsseaccess</tablename>
 <generatedtype>1</generatedtype>
-<fieldlabel>Access URL</fieldlabel>
+<fieldlabel>access_url</fieldlabel>
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
@@ -171,7 +170,7 @@
 <columnname>access_web</columnname>
 <tablename>vtiger_cbsseaccess</tablename>
 <generatedtype>1</generatedtype>
-<fieldlabel>Access Web</fieldlabel>
+<fieldlabel>access_web</fieldlabel>
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>
@@ -191,7 +190,7 @@
 <columnname>organic</columnname>
 <tablename>vtiger_cbsseaccess</tablename>
 <generatedtype>1</generatedtype>
-<fieldlabel>Organic</fieldlabel>
+<fieldlabel>organic</fieldlabel>
 <readonly>1</readonly>
 <presence>2</presence>
 <defaultvalue></defaultvalue>

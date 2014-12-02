@@ -44,21 +44,21 @@ class cbsSEAccess extends CRMEntity {
 	var $list_fields = Array (
 		/* Format: Field Label => Array(tablename, columnname) */
 		// tablename should not have prefix 'vtiger_'
-		'Sengine Access No.'=> Array('cbsseaccess', 'sengineaccessno'),
-                'Access Date'=> Array('cbsseaccess', 'access_date'),
-                'Access Time'=> Array('cbsseaccess', 'access_time'),
-                'Related to'=> Array('cbsseaccess', 'relid'),
-                'Access Web'=> Array('cbsseaccess', 'access_web'),
-                'Organic'=> Array('cbsseaccess', 'organic')
+		'sengineaccessno'=> Array('cbsseaccess', 'sengineaccessno'),
+		'access_date'=> Array('cbsseaccess', 'access_date'),
+		'access_time'=> Array('cbsseaccess', 'access_time'),
+		'relid'=> Array('cbsseaccess', 'relid'),
+		'access_web'=> Array('cbsseaccess', 'access_web'),
+		'organic'=> Array('cbsseaccess', 'organic')
 	);
 	var $list_fields_name = Array(
 		/* Format: Field Label => fieldname */
-		'Sengine Access No.'=> 'sengineaccessno',
-                'Access Date'=> 'access_date',
-                'Access Time'=> 'access_time',
-                'Related to'=> 'relid',
-		'Access Web'=> 'access_web',
-                'Organic'=> 'organic'
+		'sengineaccessno'=> 'sengineaccessno',
+		'access_date'=> 'access_date',
+		'access_time'=> 'access_time',
+		'relid'=> 'relid',
+		'access_web'=> 'access_web',
+		'organic'=> 'organic'
 	);
 
 	// Make the field link to detail view from list view (Fieldname)
@@ -68,21 +68,21 @@ class cbsSEAccess extends CRMEntity {
 	var $search_fields = Array(
 		/* Format: Field Label => Array(tablename, columnname) */
 		// tablename should not have prefix 'vtiger_'
-		'Sengine Access No.'=> Array('cbsseaccess', 'sengineaccessno'),
-                'Access Date'=> Array('cbsseaccess', 'access_date'),
-                'Access Time'=> Array('cbsseaccess', 'access_time'),
-                'Related to'=> Array('cbsseaccess', 'relid'),
-                'Access Web'=> Array('cbsseaccess', 'access_web'),
-                'Organic'=> Array('cbsseaccess', 'organic')
+		'sengineaccessno'=> Array('cbsseaccess', 'sengineaccessno'),
+		'access_date'=> Array('cbsseaccess', 'access_date'),
+		'access_time'=> Array('cbsseaccess', 'access_time'),
+		'relid'=> Array('cbsseaccess', 'relid'),
+		'access_web'=> Array('cbsseaccess', 'access_web'),
+		'organic'=> Array('cbsseaccess', 'organic')
 	);
 	var $search_fields_name = Array(
 		/* Format: Field Label => fieldname */
-		'Sengine Access No.'=> 'sengineaccessno',
-                'Access Date'=> 'access_date',
-                'Access Time'=> 'access_time',
-                'Related to'=> 'relid',
-		'Access Web'=> 'access_web',
-                'Organic'=> 'organic'
+		'sengineaccessno'=> 'sengineaccessno',
+		'access_date'=> 'access_date',
+		'access_time'=> 'access_time',
+		'relid'=> 'relid',
+		'access_web'=> 'access_web',
+		'organic'=> 'organic'
 	);
 
 	// For Popup window record selection
