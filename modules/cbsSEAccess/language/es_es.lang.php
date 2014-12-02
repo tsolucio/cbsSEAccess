@@ -9,12 +9,19 @@
  ************************************************************************************/
 
 $mod_strings = Array(
-	'ModuleName' => 'Module Name',
-	'SINGLE_ModuleName' => 'Module Name',
-	'ModuleName ID' => 'Module Name ID',
+	'cbsSEAccess' => 'Acceso Motor Búsqueda',
+	'SINGLE_cbsSEAccess' => 'Acceso Motor Búsqueda',
+	'cbsSEAccess ID' => 'ID Acceso Motor Búsqueda',
+	'sengineaccessno' => 'Nº Acceso Motor Búsqueda',
+	'access_date' => 'Fecha Acceso',
+	'access_time' => 'Hora Acceso',
+	'relid' => 'Relacionado con',
+	'access_url' => 'URL Acceso',
+	'access_web' => 'Web Acceso',
+	'organic' => 'Orgánico',
 
+	'LBL_CBSSEACCESS_INFORMATION' => 'Información Acceso Motor Búsqueda',
 	'LBL_CUSTOM_INFORMATION' => 'Información Personalizada',
-	'LBL_MODULEBLOCK_INFORMATION' => 'Información ModuleName',
 	'LBL_DESCRIPTION_INFORMATION' => 'Descripción',
 
 );

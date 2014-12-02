@@ -10,15 +10,15 @@
 
 $mod_strings = Array(
     'cbsSEAccess' => 'Search Engine Access',
-    'cbsSEAccess' => 'Search Engine Access',
-    'sengineaccessno' => 'Sengine Access No.',
+    'SINGLE_cbsSEAccess' => 'Search Engine Access',
+    'cbsSEAccess ID' => 'SE Access ID',
+    'sengineaccessno' => 'SE Access No.',
     'access_date' => 'Access Date',
     'access_time' => 'Access Time',
     'relid' => 'Related to',
     'access_url' => 'Access URL',
     'access_web' => 'Access Web',
     'organic' => 'Organic',
-    
 
     'LBL_CUSTOM_INFORMATION' => 'Custom Information',
     'LBL_CBSSEACCESS_INFORMATION' => 'Search Engine Access Information',
