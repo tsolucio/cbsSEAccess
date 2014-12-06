@@ -19,6 +19,9 @@ $mod_strings = Array(
     'access_url' => 'Access URL',
     'access_web' => 'Access Web',
     'organic' => 'Organic',
+	'websiteid' => 'Website ID',
+	'extcmpid' => 'External Campaign',
+	'cmpid' => 'Campaign',
 
     'LBL_CUSTOM_INFORMATION' => 'Custom Information',
     'LBL_CBSSEACCESS_INFORMATION' => 'Search Engine Access Information',

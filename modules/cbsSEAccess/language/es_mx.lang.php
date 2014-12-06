@@ -19,6 +19,9 @@ $mod_strings = Array(
 	'access_url' => 'URL Acceso',
 	'access_web' => 'Web Acceso',
 	'organic' => 'Orgánico',
+	'websiteid' => 'ID Website',
+	'extcmpid' => 'Campaña Externa',
+	'cmpid' => 'Campaña',
 
 	'LBL_CBSSEACCESS_INFORMATION' => 'Información Acceso Motor Búsqueda',
 	'LBL_CUSTOM_INFORMATION' => 'Información Personalizada',
