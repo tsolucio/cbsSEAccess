@@ -448,8 +448,10 @@ class cbsSEAccess extends CRMEntity {
 			if ($modAccounts) $modAccounts->setRelatedList($module, 'cbsSEAccess', Array('ADD'),'get_dependents_list');
 			if ($modContacts) $modContacts->setRelatedList($module, 'cbsSEAccess', Array('ADD'),'get_dependents_list');
 			if ($modLeads) $modLeads->setRelatedList($module, 'cbsSEAccess', Array('ADD'),'get_dependents_list');
+			$modCmps=Vtiger_Module::getInstance('Campaigns');
+			if ($modCmps) $modCmps->setRelatedList($module, 'cbsSEAccess', Array('ADD'),'get_dependents_list');
 			// TODO Handle post installation actions
-			$this->setModuleSeqNumber('configure', $modulename, $modulename.'-', '0000001');
+			$this->setModuleSeqNumber('configure', $modulename, 'cbsSE-', '0000001');
 		} else if($event_type == 'module.disabled') {
 			// TODO Handle actions when this module is disabled.
 		} else if($event_type == 'module.enabled') {
